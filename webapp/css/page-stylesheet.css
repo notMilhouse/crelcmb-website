@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+  color: #547fac; }
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 500; }
+
+h3 {
+  font-size: 1.17em;
+  font-weight: 500; }
+
+h4 {
+  font-size: 1.12em;
+  font-weight: 500;
+  color: #264363; }
+
+h5 {
+  font-size: 0.83em;
+  font-weight: 500; }
+
+h6 {
+  font-size: 0.75em;
+  font-weight: 500; }
+
+hr {
+  width: 60%; }
+
+img {
+  width: 100%; }
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #264363; }
+
+pre {
+  font-size: 1em;
+  font-weight: 400; }
+
+a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #264363;
+  cursor: pointer; }
+
+em {
+  color: #880e4f;
+  font-style: italic;
+  font-weight: 300; }
+
+button, .button {
+  padding: 10px 27px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-size: 1em;
+  background-color: #547fac;
+  color: #ebebeb;
+  transition-duration: 0.3s; }
+
+button:hover, .button:hover {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6); }
+
+.fill-container {
+  width: 100%;
+  height: 100%;
+  padding: 0; }
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .small-screens {
+    display: none; }
+
+  .large-screens {
+    display: block; }
+
+  .half-container {
+    width: 50%; } }
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .small-screens {
+    display: block; }
+
+  .large-screens {
+    display: none; }
+
+  .half-container {
+    width: 100%; } }
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebebeb;
+  width: 100%;
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%; }
+  body header {
+    z-index: 3;
+    height: 12%;
+    width: 100%;
+    background-color: #547fac;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center; }
+    body header .container {
+      width: 95%;
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between; }
+      body header .container .logo {
+        height: 90%;
+        width: 15%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around; }
+        body header .container .logo img {
+          width: 30%; }
+        body header .container .logo h2 {
+          color: #ebebeb; }
+      body header .container .controls {
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around; }
+        body header .container .controls .perfil {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 30%;
+          align-items: center;
+          justify-content: space-between; }
+          body header .container .controls .perfil .photo-placeholder {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background-color: #ebebeb; }
+          body header .container .controls .perfil h3 {
+            color: #ebebeb; }
+        body header .container .controls .button {
+          background-color: #ebebeb;
+          color: #547fac; }
+  body main {
+    width: 100%;
+    height: 88%; }
+    body main .container {
+      width: 100%;
+      height: 100%; }
+      body main .container nav {
+        z-index: 2;
+        width: 15%;
+        height: 100%;
+        box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.25); }
+        body main .container nav .container {
+          width: 100%;
+          height: 100%; }
+          body main .container nav .container ul {
+            background-color: #547fac;
+            width: 100%;
+            height: 98%;
+            display: flex; }
+            body main .container nav .container ul .container {
+              width: 100%;
+              height: 54%;
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: center;
+              justify-content: space-around; }
+              body main .container nav .container ul .container li {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center; }
+                body main .container nav .container ul .container li .nav-link {
+                  color: #ebebeb;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  align-items: center;
+                  justify-content: flex-start; }
+              body main .container nav .container ul .container li:hover {
+                background-color: #264363; }
+          body main .container nav .container footer {
+            background-color: #945A79;
+            height: 2%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center; }
+            body main .container nav .container footer p {
+              color: #ebebeb; }
+              body main .container nav .container footer p a {
+                color: #ebebeb; }
+
+/*# sourceMappingURL=page-stylesheet.css.map */
