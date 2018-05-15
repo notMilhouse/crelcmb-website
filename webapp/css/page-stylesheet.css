@@ -261,7 +261,7 @@ body {
         body header .container .logo h2 {
           color: #ebebeb; }
       body header .container .controls {
-        width: 30%;
+        width: 10%;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -269,7 +269,7 @@ body {
         body header .container .controls .perfil {
           display: flex;
           flex-flow: row nowrap;
-          width: 30%;
+          width: 100%;
           align-items: center;
           justify-content: space-between; }
           body header .container .controls .perfil .photo-placeholder {
@@ -279,51 +279,78 @@ body {
             background-color: #ebebeb; }
           body header .container .controls .perfil h3 {
             color: #ebebeb; }
-        body header .container .controls .button {
-          background-color: #ebebeb;
-          color: #547fac; }
   body main {
     width: 100%;
     height: 88%; }
     body main .container {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap; }
       body main .container nav {
         z-index: 2;
         width: 15%;
         height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
         box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.25); }
         body main .container nav .container {
           width: 100%;
-          height: 100%; }
-          body main .container nav .container ul {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap; }
+          body main .container nav .container .options {
             background-color: #547fac;
             width: 100%;
             height: 98%;
-            display: flex; }
-            body main .container nav .container ul .container {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center; }
+            body main .container nav .container .options ul {
               width: 100%;
-              height: 54%;
+              height: 100%;
               display: flex;
               flex-flow: column nowrap;
               align-items: center;
               justify-content: space-around; }
-              body main .container nav .container ul .container li {
+              body main .container nav .container .options ul li {
                 width: 100%;
                 height: 20%;
                 display: flex;
-                flex-flow: column nowrap;
-                align-items: center; }
-                body main .container nav .container ul .container li .nav-link {
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-evenly;
+                transition: 0.1s; }
+                body main .container nav .container .options ul li .nav-link {
                   color: #ebebeb;
-                  width: 100%;
+                  width: 95%;
                   height: 100%;
                   display: flex;
                   flex-flow: row nowrap;
                   align-items: center;
-                  justify-content: flex-start; }
-              body main .container nav .container ul .container li:hover {
+                  justify-content: center;
+                  font-size: 1.2em;
+                  font-weight: 400; }
+                  body main .container nav .container .options ul li .nav-link .text-container {
+                    height: 90%;
+                    width: 90%;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 1.2em;
+                    font-weight: 400; }
+                body main .container nav .container .options ul li .nav-link-before {
+                  display: block;
+                  width: 5%;
+                  height: 100%;
+                  background-color: #264363;
+                  transition: 0.3s; }
+              body main .container nav .container .options ul li:hover {
                 background-color: #264363; }
+                body main .container nav .container .options ul li:hover .nav-link-before {
+                  background-color: #ebebeb; }
           body main .container nav .container footer {
             background-color: #945A79;
             height: 2%;
@@ -335,5 +362,30 @@ body {
               color: #ebebeb; }
               body main .container nav .container footer p a {
                 color: #ebebeb; }
+      body main .container #dashboard {
+        z-index: 0;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #ebebeb; }
+        body main .container #dashboard .container {
+          width: 95%;
+          height: 95%;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: space-between; }
+          body main .container #dashboard .container .content {
+            height: 95%;
+            width: 100%; }
+          body main .container #dashboard .container footer {
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 300;
+            color: #547fac; }
 
 /*# sourceMappingURL=page-stylesheet.css.map */
