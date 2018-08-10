@@ -21,12 +21,23 @@ section {
 	width: 100%;
 }
 
+
+#main-content{
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+
+
 #navbar{
 	display: none;
 }
 
 #landing-page .container {
 	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
 	line-height: 5vh;
 	text-align: center;
 }
@@ -36,29 +47,61 @@ section {
 	min-width: 200px;
 }
 
+.image-about{
+	width: 100%;
+	height: 100%;
+}
+
+.text-about{
+	z-index: 3;
+	position: absolute;
+	width: 20%;
+	height: 35%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 1em;
+		left: 40%;
+		width: 70%;
+		height: 20px;
+		background-color: $secondary-color;
+	}
+}
 
 #about-club{
 	.container{
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
-	}
-	.image-about-club{
-		width: 100%;
-		height: 100%;
-		img{
-			width: 100%;
+		overflow: hidden;
+		.text-about{
+			right: 5%;
+			
 		}
-	}
-
-	.text-about{
-		z-index: 3;
-		position: absolute;
-		align-self: flex-start;
+		
 	}
 }
+#about-mun{
+	.container{
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		justify-content: center;
+		overflow: hidden;
+
+		.text-about{
+			left: 5%;
+		}
+	}
+}
+
 
 #webapp-login {
 	display: flex;
@@ -67,24 +110,37 @@ section {
 #webapp-login .container {
 	flex-flow: row nowrap;
 	height: calc(100%-22px);
+	align-items: center;
 }
 .know-us {
 	display: flex;
-	flex-flow: column;
+	flex-flow: column nowrap;
 	align-items: center;
-	height: 100%;
+	height: 50%;
 	width: 50%;
-	justify-content: center;
+	justify-content: space-around;
 	text-align: center;
+	.social-icons{
+		height: 5%;
+		width: 30%;
+		.social-list{
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
 }
 
 .user-login {
 	display: flex;
-	flex-flow: column;
+	flex-flow: column nowrap;
 	align-items: center;
-	height: 100%;
+	height: 50%;
 	width: 50%;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -95,7 +151,7 @@ section {
 		width: 80%;
 	}
 
-	header {
+	#header {
 		display: flex;
 		height: 7vh;
 		width: 100%;

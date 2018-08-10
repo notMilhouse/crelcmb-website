@@ -50,11 +50,6 @@ abbr{
 	font-style: italic;
 }
 
-em {
-	color: #86103c;
-	font-style: italic;
-}
-
 strong {
 	font-weight: 500;
 	font-size: 1.4rem;
@@ -102,22 +97,68 @@ h5 {
 	line-height: 110%;
 }
 h6 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 110%;
 }
 
 
-.button {
-	background-color: white;
-	border: 1px solid #547fac;
+a{
+	font-weight: 600;
+	margin-bottom: 0.3em;
+	transition: border-bottom 120ms ease-out;
+}
+a:hover {
+	border-bottom: 0.2em solid $primary-color;
+	cursor: pointer;
+}
+
+.button, button {
+	background-color: $secondary-color;
+	border: 1px solid $primary-color;
 	padding: 12px;
 	min-width: 100px;
 	text-align: center;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.button:hover {
+.button:hover, button:hover {
 	cursor: pointer;
-	animation: link-hover 400ms ease-in-out forwards;
+	background-color: $primary-color;
+	color: $secondary-color;
+}
+
+.navbar-link{
+	background-color: #f7f7f7b7;
+	color: $primary-color;
+	
+	transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in;
+}
+
+.navbar-link:hover {
+	background-color: $primary-color;
+	color: $secondary-color;
+	
+}
+
+.navbar-link, .button {
+	text-decoration: none;
+	margin: 0;
+}
+
+.navbar-link:hover, .button:hover {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.image-about{	
+	img{
+		-webkit-filter: brightness(80%);
+		filter: brightness(80%);
+	}
+}
+
+.long-essay{
+	display: none;
 }
 
 .text-input {
@@ -131,6 +172,38 @@ h6 {
 
 img{
 	max-width: 100%;
+}
+.vertical-ruler{
+	height: 60%;
+	width: 2px;
+	background-color: $primary-color;
+}
+
+#webapp-login{
+	background-color: $secondary-color;
+	p, a, h4{
+		color: $primary-color;
+	}
+	a:hover {
+		border-bottom: 0.2em solid $primary-color;
+	}
+	.button, button {
+		background-color: $secondary-color;
+		border: 1px solid $primary-color;
+	}
+	
+	.button:hover, button:hover {
+		background-color: $primary-color;
+		border-bottom: 1px solid $primary-color;
+		color: $secondary-color;
+	}
+	.vertical-ruler{
+		background-color: $primary-color;
+	}
+
+	.svg path{
+		fill: $primary-color;
+	}
 }
 
 footer{
@@ -151,20 +224,34 @@ footer a {
 .mobile-title {
 	display: inline;
 }
+#landing-page{
+	.container{
+
+		h6{
+			color: #86103c;
+		}
+	}
+}
 
 .text-about {
 	width: 100%;
 	text-align: center;
+	background-color: rgba($color: $primary-color, $alpha: 0.9);
+	text-align: justify;
 }
 
 .text-about p {
 	max-width: 100%;
+	color: $secondary-color;
+	padding: 1.3em;
+	font-size: 1.4em;
+	line-height: 1.4em;
 }
 
 
 
 @media only screen and (min-width: 1000px) {
-	header{
+	#header{
 		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 	}
 	#navbar{
@@ -177,11 +264,11 @@ footer a {
 	.mobile-title {
 		display: none;
 	}
-	.text-about {
-		align-self: center
-	}
 
 }
+
+
+
 
 
 

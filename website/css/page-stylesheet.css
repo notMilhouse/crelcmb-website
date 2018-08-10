@@ -169,10 +169,6 @@ abbr {
   color: black;
   font-style: italic; }
 
-em {
-  color: #86103c;
-  font-style: italic; }
-
 strong {
   font-weight: 500;
   font-size: 1.4rem; }
@@ -215,19 +211,54 @@ h5 {
   line-height: 110%; }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 110%; }
 
-.button {
-  background-color: white;
+a {
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  transition: border-bottom 120ms ease-out; }
+
+a:hover {
+  border-bottom: 0.2em solid #547fac;
+  cursor: pointer; }
+
+.button, button {
+  background-color: #f7f7f7;
   border: 1px solid #547fac;
   padding: 12px;
   min-width: 100px;
-  text-align: center; }
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
 
-.button:hover {
+.button:hover, button:hover {
   cursor: pointer;
-  animation: link-hover 400ms ease-in-out forwards; }
+  background-color: #547fac;
+  color: #f7f7f7; }
+
+.navbar-link {
+  background-color: #f7f7f7b7;
+  color: #547fac;
+  transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in; }
+
+.navbar-link:hover {
+  background-color: #547fac;
+  color: #f7f7f7; }
+
+.navbar-link, .button {
+  text-decoration: none;
+  margin: 0; }
+
+.navbar-link:hover, .button:hover {
+  text-decoration: none;
+  border-bottom: 0; }
+
+.image-about img {
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%); }
+
+.long-essay {
+  display: none; }
 
 .text-input {
   width: 70%;
@@ -239,6 +270,29 @@ h6 {
 
 img {
   max-width: 100%; }
+
+.vertical-ruler {
+  height: 60%;
+  width: 2px;
+  background-color: #547fac; }
+
+#webapp-login {
+  background-color: #f7f7f7; }
+  #webapp-login p, #webapp-login a, #webapp-login h4 {
+    color: #547fac; }
+  #webapp-login a:hover {
+    border-bottom: 0.2em solid #547fac; }
+  #webapp-login .button, #webapp-login button {
+    background-color: #f7f7f7;
+    border: 1px solid #547fac; }
+  #webapp-login .button:hover, #webapp-login button:hover {
+    background-color: #547fac;
+    border-bottom: 1px solid #547fac;
+    color: #f7f7f7; }
+  #webapp-login .vertical-ruler {
+    background-color: #547fac; }
+  #webapp-login .svg path {
+    fill: #547fac; }
 
 footer {
   width: 100%;
@@ -254,15 +308,24 @@ footer a {
 .mobile-title {
   display: inline; }
 
+#landing-page .container h6 {
+  color: #86103c; }
+
 .text-about {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  background-color: rgba(84, 127, 172, 0.9);
+  text-align: justify; }
 
 .text-about p {
-  max-width: 100%; }
+  max-width: 100%;
+  color: #f7f7f7;
+  padding: 1.3em;
+  font-size: 1.4em;
+  line-height: 1.4em; }
 
 @media only screen and (min-width: 1000px) {
-  header {
+  #header {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
   #navbar {
@@ -272,10 +335,7 @@ footer a {
     display: inline; }
 
   .mobile-title {
-    display: none; }
-
-  .text-about {
-    align-self: center; } }
+    display: none; } }
 html,
 body {
   height: 100%;
@@ -295,11 +355,19 @@ section {
   height: 100vh;
   width: 100%; }
 
+#main-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start; }
+
 #navbar {
   display: none; }
 
 #landing-page .container {
   flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
   line-height: 5vh;
   text-align: center; }
 
@@ -307,21 +375,47 @@ section {
   width: 12%;
   min-width: 200px; }
 
+.image-about {
+  width: 100%;
+  height: 100%; }
+
+.text-about {
+  z-index: 3;
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; }
+  .text-about::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 1em;
+    left: 40%;
+    width: 70%;
+    height: 20px;
+    background-color: #f7f7f7; }
+
 #about-club .container {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center; }
-#about-club .image-about-club {
-  width: 100%;
-  height: 100%; }
-  #about-club .image-about-club img {
-    width: 100%; }
-#about-club .text-about {
-  z-index: 3;
-  position: absolute;
-  align-self: flex-start; }
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden; }
+  #about-club .container .text-about {
+    right: 5%; }
+
+#about-mun .container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden; }
+  #about-mun .container .text-about {
+    left: 5%; }
 
 #webapp-login {
   display: flex;
@@ -329,24 +423,35 @@ section {
 
 #webapp-login .container {
   flex-flow: row nowrap;
-  height: calc(100%-22px); }
+  height: calc(100%-22px);
+  align-items: center; }
 
 .know-us {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   align-items: center;
-  height: 100%;
+  height: 50%;
   width: 50%;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center; }
+  .know-us .social-icons {
+    height: 5%;
+    width: 30%; }
+    .know-us .social-icons .social-list {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center; }
 
 .user-login {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   align-items: center;
-  height: 100%;
+  height: 50%;
   width: 50%;
-  justify-content: center; }
+  justify-content: space-around; }
 
 @media only screen and (min-width: 1000px) {
   hr.divider {
@@ -354,7 +459,7 @@ section {
     border-top: 5px rgba(0, 0, 0, 0.2);
     width: 80%; }
 
-  header {
+  #header {
     display: flex;
     height: 7vh;
     width: 100%;
@@ -377,29 +482,5 @@ section {
         display: flex;
         align-items: center;
         justify-content: center; } }
-a {
-  margin-bottom: 0.3em;
-  transition: border-bottom 100ms ease-in-out; }
-
-a:hover {
-  border-bottom: 0.5em solid #547fac;
-  cursor: pointer; }
-
-.navbar-link {
-  background-color: #f7f7f7b7;
-  color: #547facce;
-  transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in; }
-
-.navbar-link:hover {
-  background-color: #547facce;
-  color: #f7f7f7b7; }
-
-.navbar-link, .button {
-  text-decoration: none;
-  margin: 0; }
-
-.navbar-link:hover, .button:hover {
-  text-decoration: none;
-  border-bottom: 0; }
 
 /*# sourceMappingURL=page-stylesheet.css.map */
