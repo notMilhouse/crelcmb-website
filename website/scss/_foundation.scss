@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400");
+	
+$primary-color: #547fac;
+$secondary-color: #f7f7f7;
+$vinho: #86103c;
+
+html, body{
+	height: 100%;
+	width: 100%;
+	background-color: $secondary-color;
+	font-family: Roboto, Helvetica, sans-serif;
+	font-size: 1.1rem;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+q,
+blockquote,
+cite,
+abbr,
+em {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	color: #547fac;
+}
+
+q, 
+blockquote,
+cite,
+abbr{
+	color: black;
+	font-style: italic;
+}
+
+em {
+	color: #86103c;
+	font-style: italic;
+}
+
+strong {
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+
+address, 
+code {
+	color: black;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 100;
+}
+
+q, blockquote{
+	border-left: 3px solid #547fac;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 3.6rem;
+	line-height: 110%;
+}
+h2 {
+	font-size: 3.4rem;
+	line-height: 110%;
+}
+h3 {
+	font-size: 3rem;
+	line-height: 110%;
+}
+h4 {
+	font-size: 2.5rem;
+	line-height: 110%;
+}
+h5 {
+	font-size: 2rem;
+	line-height: 110%;
+}
+h6 {
+	font-size: 1.5rem;
+	line-height: 110%;
+}
+
+
+.button {
+	background-color: white;
+	border: 1px solid #547fac;
+	padding: 12px;
+	min-width: 100px;
+	text-align: center;
+}
+
+.button:hover {
+	cursor: pointer;
+	animation: link-hover 400ms ease-in-out forwards;
+}
+
+.text-input {
+	width: 70%;
+	height: 20%;
+	text-align: center;
+	border: 2px solid #547fac;
+	padding: 3px;
+	max-height: 65px;
+}
+
+img{
+	max-width: 100%;
+}
+
+footer{
+	width: 100%;
+	text-align: right;
+	
+}
+
+footer p,
+footer a {
+	font-size: 1rem;
+}
+
+.desktop-title {
+	display: none;
+}
+
+.mobile-title {
+	display: inline;
+}
+
+.text-about {
+	width: 100%;
+	text-align: center;
+}
+
+.text-about p {
+	max-width: 100%;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+	header{
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+	#navbar{
+		background-color: rgba($color: $secondary-color, $alpha: 0.8);
+	}
+	
+	.desktop-title {
+		display: inline;
+	}
+	.mobile-title {
+		display: none;
+	}
+	.text-about {
+		align-self: center
+	}
+
+}
+
+
+
+

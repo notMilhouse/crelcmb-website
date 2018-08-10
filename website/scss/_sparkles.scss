@@ -1,0 +1,31 @@
+a{
+	margin-bottom: 0.3em;
+	transition: border-bottom 100ms ease-in-out;
+}
+a:hover {
+	border-bottom: 0.5em solid $primary-color;
+	cursor: pointer;
+}
+.navbar-link{
+	background-color: #f7f7f7b7;
+	color: #547facce;
+	
+	transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in;
+}
+
+.navbar-link:hover {
+	background-color: #547facce;
+	color: #f7f7f7b7;
+	
+}
+
+.navbar-link, .button {
+	text-decoration: none;
+	margin: 0;
+}
+
+.navbar-link:hover, .button:hover {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
