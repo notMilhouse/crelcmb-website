@@ -162,25 +162,9 @@ p,
 a {
   color: #547fac; }
 
-q,
-blockquote,
-cite,
-abbr {
-  color: black;
-  font-style: italic; }
-
 strong {
   font-weight: 500;
   font-size: 1.4rem; }
-
-address,
-code {
-  color: black;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 100; }
-
-q, blockquote {
-  border-left: 3px solid #547fac; }
 
 h1,
 h2,
@@ -237,7 +221,6 @@ a:hover {
   color: #f7f7f7; }
 
 .navbar-link {
-  background-color: #f7f7f7b7;
   color: #547fac;
   transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in; }
 
@@ -254,8 +237,8 @@ a:hover {
   border-bottom: 0; }
 
 .image-about img {
-  -webkit-filter: brightness(80%);
-  filter: brightness(80%); }
+  -webkit-filter: brightness(75%);
+  filter: brightness(75%); }
 
 .long-essay {
   display: none; }
@@ -314,13 +297,14 @@ footer a {
 .text-about {
   width: 100%;
   text-align: center;
-  background-color: rgba(84, 127, 172, 0.9);
-  text-align: justify; }
+  /* background-color: rgba($color: $primary-color, $alpha: 0.9); */
+  text-align: left; }
 
 .text-about p {
   max-width: 100%;
   color: #f7f7f7;
-  padding: 1.3em;
+  border-left: 0.3em solid #f7f7f7;
+  padding: 0.5em;
   font-size: 1.4em;
   line-height: 1.4em; }
 
@@ -329,7 +313,7 @@ footer a {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
   #navbar {
-    background-color: rgba(247, 247, 247, 0.8); }
+    background-color: rgba(247, 247, 247, 0.3); }
 
   .desktop-title {
     display: inline; }
@@ -386,26 +370,28 @@ section {
   height: 35%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center; }
-  .text-about::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 1em;
-    left: 40%;
-    width: 70%;
-    height: 20px;
-    background-color: #f7f7f7; }
+  justify-content: center;
+  /* &::after{
+  	content: "";
+  	display: block;
+  	position: absolute;
+  	bottom: 0.5em;
+  	left: 30%;
+  	width: 70%;
+  	height: 20px;
+  	background-color: $secondary-color;
+  } */ }
 
 #about-club .container {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   overflow: hidden; }
   #about-club .container .text-about {
-    right: 5%; }
+    top: 10%;
+    left: 5%; }
 
 #about-mun .container {
   position: relative;
@@ -452,6 +438,18 @@ section {
   height: 50%;
   width: 50%;
   justify-content: space-around; }
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3em;
+  background-color: #547fac; }
+  footer p, footer a {
+    padding: 0.2em;
+    color: #f7f7f7; }
 
 @media only screen and (min-width: 1000px) {
   hr.divider {

@@ -1,0 +1,165 @@
+//
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400");
+$primary-color: #547fac;
+$secondary-color: #264363;
+$third-color: #880e4f;
+$page-bg-color: #ebebeb;
+$font-size: 1em;
+$primary-text-color: #547fac;
+$secondary-text-color: #264363;
+$default-block-height: 20%;
+$default-block-width: 20%;
+
+
+//labelling
+
+
+h1 {
+	font-size: $font-size + 1em;
+	font-weight: 500;
+	color: $primary-color;
+}
+
+h2 {
+	font-size: $font-size + 0.5em;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: $font-size + 0.17em;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: $font-size + 0.12em;
+	font-weight: 500;
+	color: $secondary-color;
+}
+
+h5 {
+	font-size: $font-size - 0.17em;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: $font-size - 0.25em;
+	font-weight: 500;
+}
+
+hr{
+	width: 60%;
+}
+
+caption {}
+
+label{}
+legend {}
+
+//visual
+
+iframe{}
+img{
+	width: 100%;
+}
+
+//text-content
+
+ul{}
+ol{}
+li{}
+
+p {
+	font-size: $font-size;
+	font-weight: 400;
+	color: $secondary-color;
+}
+pre {
+	font-size: $font-size;
+	font-weight: 400;
+}
+
+//special text
+a{
+	font-weight: 300;
+	text-decoration: none;
+	color: $secondary-color;
+	cursor: pointer;
+}
+abbr{}
+b{}
+s{}
+u{}
+kbd{}
+samp{}
+var{}
+strong{}
+em{
+	color: $third-color;
+	font-style: italic;
+	font-weight: 300;
+}
+q{}
+cite{}
+code{}
+data{}
+time{}
+mark{}
+
+//table
+
+table{}
+
+thead{}
+tbody{}
+tfoot{}
+
+col {}
+colgroup {}
+
+th {}
+td {}
+tr{}
+
+//forms
+
+form {}
+fieldset {}
+
+input {}
+datalist{}
+select {}
+optgroup {}
+option {}
+
+button, .button {
+	padding: 10px 27px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+	text-decoration: none;
+	font-size: $font-size;
+	background-color: $primary-color;
+	color: $page-bg-color;
+	transition-duration: 0.3s;
+}
+
+button:hover, .button:hover {
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6);	
+}
+
+
+meter{}
+progress{}
+
+output {}
+
+//interactive
+
+menu{}
+menuitem{}
+

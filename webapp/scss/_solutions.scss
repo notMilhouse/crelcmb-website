@@ -1,0 +1,322 @@
+@import "_atoms";
+
+.fill-container {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.small-screens {
+		display: none;
+	}
+	.large-screens {
+		display: block;
+	}
+	.half-container {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	/* For desktop: */
+	.small-screens {
+		display: block;
+	}
+	.large-screens {
+		display: none;
+	}
+	.half-container {
+		width: 100%;
+	}
+}
+
+//base
+html {
+	font-family: 'Roboto', sans-serif;
+	background-color: $page-bg-color;
+	width: 100%;
+	height: 100%;
+}
+
+
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 100%;
+
+	#login-page {
+		width: 100%;
+		height: 100%;
+		.container{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: center;
+			.login-background{
+				width: 100%;
+				height: 100%;
+				background: center / contain no-repeat url("../resources/blue_crel.svg");
+				.container{
+					height: 98%;
+					width: 100%;
+					display: flex;
+					flex-flow: column nowrap;
+					align-items: center;
+					justify-content: flex-end;
+					text-align: center;
+				}
+			}
+			.login-area{
+				width: 25%;
+				height: 85%;
+				background-color: rgba($color: $primary-color, $alpha: 0.85);
+				box-shadow: 2px 2px 3px 0px rgba($color: #000000, $alpha: 0.25);
+				position: absolute;
+				.container{
+					height: 100%;
+					width: 100%;
+					display: flex;
+					flex-flow: column nowrap;
+					align-items: center;
+					justify-content: space-evenly;
+					h2{
+						color: $page-bg-color;
+						font-weight: 300;
+					}
+					.form-container{
+						height: 35%;
+						width: 75%;
+						form{
+							width: 100%;
+							height: 80%;
+							display: flex;
+							flex-flow: column nowrap;
+							align-items: center;
+							justify-content: space-between;
+							color: $page-bg-color;
+							.button{
+								border: none;
+								background-color: $page-bg-color;
+								color: $primary-color;
+							}.button:hover{
+								background-color: $primary-color;
+								color: $page-bg-color;
+								cursor: pointer;
+							}
+							a{
+								color: $page-bg-color;
+								text-decoration: underline;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	
+	header {
+		z-index: 3;
+		height: 12%;
+		width: 100%;
+		background-color: $primary-color;
+		box-shadow: 0px 3px 3px 0px rgba($color: #000000, $alpha: 0.25);
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+		.container{
+			width: 95%;
+			height: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-between;
+			.logo{
+				height: 90%;
+				width: 15%;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: space-around;
+				img{
+					width: 30%;
+				}
+				h2{
+					color: $page-bg-color;
+				}
+			}
+			.controls{
+				width: 10%;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: space-around;
+				.perfil{
+					display: flex;
+					flex-flow: row nowrap;
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					.photo-placeholder{
+						width: 60px;
+						height: 60px;
+						border-radius: 15px;
+						background-color: $page-bg-color;
+					}
+					h3{
+						color: $page-bg-color;
+					}
+				}
+				
+			}
+		}
+	}
+	main {
+		width: 100%;
+		height: 88%;
+		.container{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			nav{
+				z-index: 2;
+				width: 15%;
+				height: 100%;
+				display: flex;
+				flex-flow: column nowrap;
+				box-shadow: 0px 0px 3px 3px rgba($color: #000000, $alpha: 0.25);
+				.container{
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-flow: column nowrap;
+					.options{
+						background-color: $primary-color;
+						width: 100%;
+						height: 98%;
+						display: flex;
+						flex-flow: column nowrap;
+						align-items: center;
+						justify-content: flex-start;
+						ul{
+							width: 100%;
+							height: 70%;
+							display: flex;
+							flex-flow: column nowrap;
+							align-items: center;
+							justify-content: space-around;
+							li {
+								width: 100%;
+								height: 20%;
+								display: flex;
+								flex-flow: row nowrap;
+								align-items: center;
+								justify-content: space-evenly;
+								transition: 0.1s;
+								.nav-link {
+									color: $page-bg-color;
+									width: 95%;
+									height: 100%;
+									display: flex;
+									flex-flow: row nowrap;
+									align-items: center;
+									justify-content: center;
+									font-size: 1.2em;
+									font-weight: 400;
+									.text-container{
+										height: 90%;
+										width: 90%;
+										display: flex;
+										flex-flow: row nowrap;
+										align-items: center;
+										justify-content: flex-start;
+										font-size: 1.2em;
+										font-weight: 400;
+									}
+								}
+
+								.nav-link-before {
+									display: none;
+									width: 5%;
+									height: 100%;
+									background-color: $secondary-color;
+									transition: 0.3s;
+								}
+							}
+							
+							
+							li:hover{
+								background-color: $secondary-color;
+								.nav-link-before {
+									display: block;
+									background-color: $page-bg-color;
+								}
+							}
+
+						}
+						
+					}
+					footer {
+						background-color: #945A79;
+						height: 2%;
+						display: flex;
+						flex-flow: row nowrap;
+						align-items: center;
+						justify-content: center;
+						p{
+							color: $page-bg-color;
+							a{
+								color: $page-bg-color;
+							}
+						}
+					}
+				}
+			}
+			#dashboard{
+				z-index: 0;
+				width: 85%;
+				height: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: center;
+				background-color: $page-bg-color;
+				.container{
+					width: 95%;
+					height: 95%;
+					display: flex;
+					flex-flow: column nowrap;
+					align-items: center;
+					justify-content: space-between;
+					.content{
+						height: 95%;
+						width: 100%;
+							
+					}
+					footer{
+						width: 100%;
+						text-align: center;
+						font-size: 1em;
+						font-weight: 300;
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+	}
+}
+

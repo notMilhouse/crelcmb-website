@@ -42,29 +42,9 @@ a {
 	color: #547fac;
 }
 
-q, 
-blockquote,
-cite,
-abbr{
-	color: black;
-	font-style: italic;
-}
-
 strong {
 	font-weight: 500;
 	font-size: 1.4rem;
-}
-
-
-address, 
-code {
-	color: black;
-	font-family: 'Roboto Mono', monospace;
-	font-weight: 100;
-}
-
-q, blockquote{
-	border-left: 3px solid #547fac;
 }
 
 h1,
@@ -128,14 +108,12 @@ a:hover {
 }
 
 .navbar-link{
-	background-color: #f7f7f7b7;
 	color: $primary-color;
-	
 	transition: background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in;
 }
 
 .navbar-link:hover {
-	background-color: $primary-color;
+	background-color: rgba($color: $primary-color, $alpha: 1);
 	color: $secondary-color;
 	
 }
@@ -152,8 +130,8 @@ a:hover {
 
 .image-about{	
 	img{
-		-webkit-filter: brightness(80%);
-		filter: brightness(80%);
+		-webkit-filter: brightness(75%);
+		filter: brightness(75%);
 	}
 }
 
@@ -200,9 +178,9 @@ img{
 	.vertical-ruler{
 		background-color: $primary-color;
 	}
-
 	.svg path{
 		fill: $primary-color;
+		
 	}
 }
 
@@ -236,14 +214,15 @@ footer a {
 .text-about {
 	width: 100%;
 	text-align: center;
-	background-color: rgba($color: $primary-color, $alpha: 0.9);
-	text-align: justify;
+	/* background-color: rgba($color: $primary-color, $alpha: 0.9); */
+	text-align: left;
 }
 
 .text-about p {
 	max-width: 100%;
 	color: $secondary-color;
-	padding: 1.3em;
+	border-left: 0.3em solid $secondary-color;
+	padding: 0.5em;
 	font-size: 1.4em;
 	line-height: 1.4em;
 }
@@ -255,7 +234,7 @@ footer a {
 		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 	}
 	#navbar{
-		background-color: rgba($color: $secondary-color, $alpha: 0.8);
+		background-color: rgba($color: $secondary-color, $alpha: 0.3);
 	}
 	
 	.desktop-title {

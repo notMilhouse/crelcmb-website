@@ -60,16 +60,16 @@ section {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	&::after{
+	/* &::after{
 		content: "";
 		display: block;
 		position: absolute;
-		bottom: 1em;
-		left: 40%;
+		bottom: 0.5em;
+		left: 30%;
 		width: 70%;
 		height: 20px;
 		background-color: $secondary-color;
-	}
+	} */
 }
 
 #about-club{
@@ -77,11 +77,12 @@ section {
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		align-items: flex-end;
-		justify-content: center;
+		align-items: flex-start;
+		justify-content: flex-start;
 		overflow: hidden;
 		.text-about{
-			right: 5%;
+			top: 10%;
+			left: 5%;
 			
 		}
 		
@@ -141,6 +142,20 @@ section {
 	height: 50%;
 	width: 50%;
 	justify-content: space-around;
+}
+
+footer{
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.3em;
+	background-color: $primary-color;
+	p, a{
+		padding: 0.2em;
+		color: $secondary-color;
+	}
 }
 
 @media only screen and (min-width: 1000px) {
