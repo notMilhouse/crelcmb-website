@@ -85,10 +85,10 @@ h6 {
 a{
 	font-weight: 600;
 	margin-bottom: 0.3em;
-	transition: border-bottom 120ms ease-out;
+	transition: border-bottom 80ms ease-in-out;
 }
 a:hover {
-	border-bottom: 0.2em solid $primary-color;
+	border-bottom: 0.3em solid $primary-color;
 	cursor: pointer;
 }
 
@@ -164,7 +164,11 @@ img{
 	}
 	a:hover {
 		border-bottom: 0.2em solid $primary-color;
+		svg path{
+			fill: $primary-color;
+		}
 	}
+
 	.button, button {
 		background-color: $secondary-color;
 		border: 1px solid $primary-color;
@@ -177,10 +181,6 @@ img{
 	}
 	.vertical-ruler{
 		background-color: $primary-color;
-	}
-	.svg path{
-		fill: $primary-color;
-		
 	}
 }
 

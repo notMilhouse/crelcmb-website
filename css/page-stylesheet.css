@@ -201,10 +201,10 @@ h6 {
 a {
   font-weight: 600;
   margin-bottom: 0.3em;
-  transition: border-bottom 120ms ease-out; }
+  transition: border-bottom 80ms ease-in-out; }
 
 a:hover {
-  border-bottom: 0.2em solid #547fac;
+  border-bottom: 0.3em solid #547fac;
   cursor: pointer; }
 
 .button, button {
@@ -265,6 +265,8 @@ img {
     color: #547fac; }
   #webapp-login a:hover {
     border-bottom: 0.2em solid #547fac; }
+    #webapp-login a:hover svg path {
+      fill: #547fac; }
   #webapp-login .button, #webapp-login button {
     background-color: #f7f7f7;
     border: 1px solid #547fac; }
@@ -274,8 +276,6 @@ img {
     color: #f7f7f7; }
   #webapp-login .vertical-ruler {
     background-color: #547fac; }
-  #webapp-login .svg path {
-    fill: #547fac; }
 
 footer {
   width: 100%;
